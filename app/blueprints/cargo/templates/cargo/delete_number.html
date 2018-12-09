@@ -1,0 +1,18 @@
+{% extends 'layouts/app.html' %}
+
+{% block body %}
+    <div class="container">
+        <h4 style="margin-left: 45px"> delete the cargonumber ? </h4>
+        <hr>
+            <p style="margin-left: 45px">
+                Cargonumber Id: {{ delete_info.cargo_number }}
+            </p>
+        <br>
+        <form action="{{ url_for('main.delete_cargo_number', delete_number=delete_info.cargo_number) }}" method="POST" style="margin-left: 45px">
+           <input type="hidden" id="csrf_token" value="{{ csrf_token() }}" name="csrf_token" />
+           <button type="submit" class="btn btn-sm btn-primary"> delete </button>
+        </form>
+    </div>
+{% endblock %}
+
+

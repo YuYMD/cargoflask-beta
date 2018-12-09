@@ -1,0 +1,29 @@
+
+@charset 'utf-8';
+
+body {
+    background: url(../../../../static/images/land-img/frontimg.jpg);
+    background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	color: #cfcfcf;
+}
+
+
+/* index.css 
+h1 {
+  color: red;
+}*/
+
+/*#ktesat{
+	background: url(../../../../static/images/land-img/frontimg.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	color: #cfcfcf;
+}*/
+
+
+/*url(../../../../static/images/land-img/frontimg.jpg)*/

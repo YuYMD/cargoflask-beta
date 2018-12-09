@@ -1,0 +1,50 @@
+{% extends 'layouts/app.html' %}
+{% import 'macros/form.html' as f with context %}
+    {% block body %}
+<div class="container books">
+    <div class="row">
+    <div class="table-responsive">
+       <table class="table table-condensed">
+       <table class="table">
+            <thead>
+            <tr>
+            <th>cargo_number</th>
+            <th>flight</th>
+            <th>date</th>
+            <th>departure</th>
+            <th>arrival</th>
+            <th>pieces </th>
+            <th>weight</th>
+            <th>STD</th>
+            <th>STA</th>
+            <th>ATD</th>
+            <th>ATD</th>
+            </tr>
+        </thead>
+          
+        <tbody >
+        <!-- ???? -->
+        {% for cargo_infos in cargo_infos %} 
+        <tr class="active">
+            <td>{{ cargo_infos.cargo_number }}</td>
+            <td>{{ cargo_infos.flight }}</td>
+            <td>{{ cargo_infos.date }}</td>
+            <td>{{ cargo_infos.departure }}</td>
+            <td>{{ cargo_infos.arrival }}</td>
+            <td>{{ cargo_infos.pieces }}</td>
+            <td>{{ cargo_infos.weight}}</td>
+            <td>{{ cargo_infos.std }}</td>
+            <td>{{ cargo_infos.sta }}</td>
+            <td>{{ cargo_infos.atd }}</td>
+            <td>{{ cargo_infos.ata }}</td>
+            <td><span class="label label-info"><a href="{{ url_for('main.delete_cargo_number', delete_number=cargo_infos.cargo_number ) }}" style="color: floralwhite"> delete </a></span></td>
+
+        </tr>
+        {% endfor %} 
+        </tbody>
+        </table>
+        </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
